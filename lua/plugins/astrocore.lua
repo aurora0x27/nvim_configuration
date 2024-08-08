@@ -66,11 +66,14 @@ return {
         ["<Leader>b"] = { desc = "Buffers" },
         -- quick save
         -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
+
+        ["<F7>"] = {":ToggleTerm direction=float<CR>", desc = "ToogleTerm float"},
       },
       t = {
         -- setting a mapping to false will disable it
         -- ["<esc>"] = false,
       },
     },
+
   },
 }
