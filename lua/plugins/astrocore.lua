@@ -31,7 +31,8 @@ return {
         signcolumn = "auto", -- sets vim.opt.signcolumn to auto
         wrap = false, -- sets vim.opt.wrap
         tabstop = 4,
-        autoindent = true,
+        -- autoindent = true,
+        -- cindent=true;
         clipboard = "unnamedplus",
         termguicolors = true,
       },
