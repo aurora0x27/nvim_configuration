@@ -41,7 +41,8 @@ return {
     servers = {
       "clangd",
       "gopls",
-      "pyright"
+      "pyright",
+      "rust_analyzer"
     },
     -- customize language server configuration options passed to `lspconfig`
     ---@diagnostic disable: missing-fields
