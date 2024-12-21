@@ -9,19 +9,17 @@
 
 -- install with yarn or npm
 return {
-    "iamcco/markdown-preview.nvim",
-    cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
-    build = "cd app && yarn install",
+    'iamcco/markdown-preview.nvim',
+    cmd = { 'MarkdownPreviewToggle', 'MarkdownPreview', 'MarkdownPreviewStop' },
+    build = 'cd app && yarn install',
 
     -- MarkdownPreviewToggle mappings
     keys = {
-        {"<F8>",":MarkdownPreviewToggle<CR>", desc = "MarkdownPreviewToggle"}
+        { '<F8>', ':MarkdownPreviewToggle<CR>', desc = 'MarkdownPreviewToggle' },
     },
 
     init = function()
-
-
-        vim.g.mkdp_filetypes = { "markdown" }
+        vim.g.mkdp_filetypes = { 'markdown' }
         -- set to 1, nvim will open the preview window after entering the Markdown buffer
         -- default: 0
         vim.g.mkdp_auto_start = 0
@@ -51,14 +49,14 @@ return {
         -- Useful when you work in remote Vim and preview on local browser.
         -- For more details see: https://github.com/iamcco/markdown-preview.nvim/pull/9
         -- default empty
-        vim.g.mkdp_open_ip = ""
+        vim.g.mkdp_open_ip = ''
 
         -- specify browser to open preview page
         -- for path with space
         -- valid: `/path/with\ space/xxx`
         -- invalid: `/path/with\\ space/xxx`
         -- default: ''
-        vim.g.mkdp_browser = "firefox"
+        vim.g.mkdp_browser = 'firefox'
 
         -- set to 1, echo preview page URL in command line when opening preview page
         -- default is 0
@@ -67,7 +65,7 @@ return {
         -- a custom Vim function name to open preview page
         -- this function will receive URL as param
         -- default is empty
-        vim.g.mkdp_browserfunc = ""
+        vim.g.mkdp_browserfunc = ''
 
         -- options for Markdown rendering
         -- mkit: markdown-it options for rendering
@@ -100,25 +98,25 @@ return {
 
         -- use a custom Markdown style. Must be an absolute path
         -- like '/Users/username/markdown.css' or expand('~/markdown.css')
-        vim.g.mkdp_markdown_css = ""
+        vim.g.mkdp_markdown_css = ''
 
         -- use a custom highlight style. Must be an absolute path
         -- like '/Users/username/highlight.css' or expand('~/highlight.css')
-        vim.g.mkdp_highlight_css = ""
+        vim.g.mkdp_highlight_css = ''
 
         -- use a custom port to start server or empty for random
-        vim.g.mkdp_port = ""
+        vim.g.mkdp_port = ''
 
         -- preview page title
         -- ${name} will be replace with the file name
-        vim.g.mkdp_page_title = "「${name}」"
+        vim.g.mkdp_page_title = '「${name}」'
 
         -- use a custom location for images
         -- vim.g.mkdp_images_path = /home/user/.markdown_images
 
         -- set default theme (dark or light)
         -- By default the theme is defined according to the preferences of the system
-        vim.g.mkdp_theme = "dark"
+        vim.g.mkdp_theme = 'dark'
 
         -- combine preview window
         -- default: 0
@@ -131,5 +129,5 @@ return {
         vim.g.mkdp_combine_preview_auto_refresh = 1
     end,
 
-    ft = { "markdown" },
+    ft = { 'markdown' },
 }
